@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajahmundry Traffic Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Management System</h1>
+        
+        <div class="route-finder">
+            <div class="input-section">
+                <select id="start-location">
+                    <option value="">Select Starting Point</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="surat">Surat</option>
+                    <option value="pune">Pune</option>
+                    <option value="jaipur">Jaipur</option>
+                    <option value="lucknow">Lucknow</option>
+                </select>
+
+                <select id="end-location">
+                    <option value="">Select Destination</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="surat">Surat</option>
+                    <option value="pune">Pune</option>
+                    <option value="jaipur">Jaipur</option>
+                    <option value="lucknow">Lucknow</option>
+                </select>
+                <button onclick="findBestRoute()">Find Best Route</button>
+            </div>
+
+            <div class="map-container">
+                <div id="traffic-map" class="route-display">
+                    <div class="start-point-image"></div>
+                    <div class="route-line"></div>
+                    <div class="end-point-image"></div>
+                </div>
+            </div>
+
+            <div class="results">
+                <h2>Recommended Route</h2>
+                <div id="route-details" class="route-info">
+                    <p class="route-path"></p>
+                    <p class="estimated-time"></p>
+                    <p class="traffic-condition"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="traffic-status">
+            <h2>Current Traffic Status</h2>
+            <div id="traffic-levels"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
